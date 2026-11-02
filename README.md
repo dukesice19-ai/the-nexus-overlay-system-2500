@@ -15,4 +15,5 @@ Unified interactive data overlay application combining all four project delivera
 
 - **Permanent Perplexity App (`*.pplx.app`)**: https://nexus-overlay-2500.pplx.app
 - **Interactive Preview Card**: https://www.perplexity.ai/computer/a/the-nexus-interactive-data-ove-k8XKXFSWR92nHWOb2RsmxQ
-- **Vercel Edge CDN**: Pre-configured via `vercel.json` (`vercel --prod`)
+- **One-Click Vercel GitHub Import**: [Import `dukesice19-ai/the-nexus-overlay-system-2500` on Vercel](https://vercel.com/new/import?s=https%3A%2F%2Fgithub.com%2Fdukesice19-ai%2Fthe-nexus-overlay-system-2500)
+- **Vercel Edge CDN Manifest**: Pre-configured via `vercel.json` (`vercel --prod`)
