@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>THE NEXUS // Interactive Data Overlay System (Epoch 2500)</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2322d3ee' stroke-width='2'%3E%3Cpolygon points='12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Sticky Command Header -->
+  <header class="nexus-header" role="banner">
+    <div class="header-inner">
+      <div class="brand-cluster">
+        <div class="brand-emblem" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon>
+            <line x1="12" y1="22" x2="12" y2="15.5"></line>
+            <polyline points="22 8.5 12 15.5 2 8.5"></polyline>
+            <polyline points="2 15.5 12 8.5 22 15.5"></polyline>
+            <line x1="12" y1="2" x2="12" y2="8.5"></line>
+          </svg>
+        </div>
+        <div class="brand-titles">
+          <div class="brand-eyebrow">
+            <span class="live-dot" id="header-live-dot"></span>
+            <span>EPOCH 2500.11.01 // UNIFIED TELEMETRY &amp; VITAL DATA OVERLAY ENGINE</span>
+          </div>
+          <h1 class="brand-title">THE NEXUS — Interactive Data Overlay System</h1>
+          <div class="brand-sub">Click any image, diagram, hotspot pin, or animation to launch deep-dive Vital Data Modals · Adjust live parameter sliders · Inspect real-time telemetry</div>
+        </div>
+      </div>
+
+      <!-- Global Real-Time Telemetry Strip -->
+      <div class="global-telemetry-strip" aria-label="Global System Telemetry">
+        <div class="g-stat" data-tooltip-title="Unified Visual Component Registry" data-tooltip-desc="18 interactive visual components + 39 original deliverable image/page assets wrapped with live HUD overlays." data-tooltip-id="SYS-REG" data-tooltip-m1="Visual Units|18 Active" data-tooltip-m2="Asset Vault|39 PNG Pages">
+          <span class="g-stat-label">Interactive Visuals</span>
+          <span class="g-stat-val mono"><span id="g-active-visuals">18 / 18</span> <span class="g-stat-delta delta-info">39 Assets</span></span>
+        </div>
+        <div class="g-stat" data-tooltip-title="Grok RockBots Horse Hub Telemetry" data-tooltip-desc="60fps SVG Racetrack Simulator + PuntersEdge Next-to-Go &amp; 8-Bookmaker live odds dispersion matrix." data-tooltip-id="DOM-01" data-tooltip-m1="Track FPS|60.0 FPS" data-tooltip-m2="Fav Leader|#1 Golden Grok">
+          <span class="g-stat-label">Race Pulse Sim</span>
+          <span class="g-stat-val mono"><span id="g-race-telemetry">1:22.48</span> <span class="g-stat-delta delta-pos" id="g-race-fps">60 FPS</span></span>
+        </div>
+        <div class="g-stat" data-tooltip-title="Network Capture Toolkit (Rev 1.6)" data-tooltip-desc="30 manuals, 119 validated filters, 161 passing tests, 100% of 60,000 UDP lab packets captured under 25% CPU / 256 MiB cgroup cap." data-tooltip-id="DOM-02" data-tooltip-m1="Lab Capture|60,000 / 60,000" data-tooltip-m2="Peak Memory|101.0 MiB">
+          <span class="g-stat-label">Capture Grid Lab</span>
+          <span class="g-stat-val mono"><span id="g-net-telemetry">101.0 MiB</span> <span class="g-stat-delta delta-pos">100% Cap</span></span>
+        </div>
+        <div class="g-stat" data-tooltip-title="Meta Platforms (META) &amp; 13-Instrument Brief" data-tooltip-desc="Market close 30 Oct 2026: META $614.99 (-1.53%), Q3 Rev $64.6B (+26.1% YoY), Street Consensus $862.18 (+40.2% upside)." data-tooltip-id="DOM-03" data-tooltip-m1="META Close|$614.99" data-tooltip-m2="Consensus|$862.18 (+40.2%)">
+          <span class="g-stat-label">META Implied Model</span>
+          <span class="g-stat-val mono"><span id="g-meta-telemetry">$614.99</span> <span class="g-stat-delta delta-pos" id="g-meta-upside">+40.2% Tgt</span></span>
+        </div>
+        <div class="g-stat" data-tooltip-title="546-Bot Fleet &amp; Bot Studio / ProtoKit" data-tooltip-desc="35.7% weekly Grok Bot pool used (Botnik 23.0% / 68 msgs), 56 bots throttled, 18 Bot Studio steps, 42 ProtoKit checks." data-tooltip-id="DOM-04" data-tooltip-m1="Fleet Size|546 Bots" data-tooltip-m2="Pool Used|35.7%">
+          <span class="g-stat-label">Bot Fleet Quota</span>
+          <span class="g-stat-val mono"><span id="g-bot-telemetry">35.7%</span> <span class="g-stat-delta delta-neg" id="g-bot-cutoff">56 Cut Off</span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sticky Domain Navigation & Overlay Controls -->
+  <nav class="control-bar" aria-label="Deliverable Domains and Overlay Controls">
+    <div class="control-bar-inner">
+      <div class="domain-tabs" role="tablist" id="domain-tabs">
+        <button type="button" class="domain-tab active" data-domain="all" role="tab" aria-selected="true">
+          <span>All Deliverables</span>
+          <span class="tab-count">18 Visuals + 39 Assets</span>
+        </button>
+        <button type="button" class="domain-tab" data-domain="horse-hub" role="tab" aria-selected="false">
+          <span>01 · Race Pulse (Horse Hub)</span>
+          <span class="tab-count">3</span>
+        </button>
+        <button type="button" class="domain-tab" data-domain="network-capture" role="tab" aria-selected="false">
+          <span>02 · Capture Grid (Network Toolkit)</span>
+          <span class="tab-count">4</span>
+        </button>
+        <button type="button" class="domain-tab" data-domain="meta-brief" role="tab" aria-selected="false">
+          <span>03 · Meta Brief (Market &amp; Financials)</span>
+          <span class="tab-count">4</span>
+        </button>
+        <button type="button" class="domain-tab" data-domain="bot-canvas" role="tab" aria-selected="false">
+          <span>04 · Bot &amp; Fleet Canvas (Bot Studio + ProtoKit)</span>
+          <span class="tab-count">5</span>
+        </button>
+        <button type="button" class="domain-tab" data-domain="asset-vault" role="tab" aria-selected="false">
+          <span>05 · Deliverable Image &amp; Cover Vault</span>
+          <span class="tab-count">39</span>
+        </button>
+        <button type="button" class="domain-tab" data-domain="system-options" role="tab" aria-selected="false">
+          <span>06 · System Options, API &amp; Deploy Hub</span>
+          <span class="tab-count">2 + Hub</span>
+        </button>
+      </div>
+
+      <div class="overlay-controls">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input type="search" id="global-search" placeholder="Filter visuals, manuals, bots..." aria-label="Filter visual components and deliverables" />
+        </div>
+        <button type="button" class="ctrl-btn active" id="toggle-hotspots-btn" title="Toggle interactive hotspot pins on all visual components">
+          <span>Hotspot Pins: ON</span>
+        </button>
+        <button type="button" class="ctrl-btn" id="toggle-xray-btn" title="Toggle X-Ray vector telemetry overlay across all visual stages">
+          <span>X-Ray Overlay: OFF</span>
+        </button>
+        <button type="button" class="ctrl-btn active" id="toggle-stream-btn" title="Pause or resume real-time 60fps animations and live telemetry ticks">
+          <span>Telemetry Stream: LIVE</span>
+        </button>
+        <button type="button" class="ctrl-btn" id="reset-all-sliders-btn" title="Reset all parameter sliders across all 18 visual components to verified baseline">
+          <span>Reset All Sliders</span>
+        </button>
+        <button type="button" class="ctrl-btn" id="export-full-csv-btn" title="Export all 18 visual components and live telemetry metrics to CSV">
+          <span>Export All CSV</span>
+        </button>
+        <button type="button" class="ctrl-btn" id="jump-options-hub-btn" title="Jump to System Options, Presets, API Hooks & Deployment Command Center">
+          <span>Options &amp; Deploy Hub ⚙</span>
+        </button>
+        <button type="button" class="ctrl-btn" id="toggle-theme-btn" title="Switch between Year-2500 Orbital Dark and High-Contrast Daylight Lab theme">
+          <span id="theme-btn-label">Theme: Dark</span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Workspace -->
+  <main class="workspace-main" id="workspace-root"></main>
+
+  <!-- Footer -->
+  <footer class="nexus-footer">
+    <div>
+      <strong>THE NEXUS // INTERACTIVE DATA OVERLAY SYSTEM</strong> · Unified Deliverable Telemetry Platform · Prepared for Meta Platforms, Inc. &amp; Executive Operations
+    </div>
+    <div class="mono">
+      Copyright (c) 2026 GODFREY TRADING PTY LTD. All rights reserved. · SHA-256: 4a38ddb764d47f19…6f64f
+    </div>
+  </footer>
+
+  <!-- Floating Precision Tooltip HUD -->
+  <div id="nexus-tooltip" class="nexus-tooltip" role="tooltip" aria-hidden="true">
+    <div class="tt-head">
+      <span class="tt-id" id="tt-id">VC-01 · PIN-1</span>
+      <span class="tt-prov" id="tt-prov">VERIFIED TELEMETRY</span>
+    </div>
+    <h4 class="tt-title" id="tt-title">Component Hotspot</h4>
+    <p class="tt-desc" id="tt-desc">Detailed real-time overlay telemetry description.</p>
+    <div class="tt-metrics" id="tt-metrics">
+      <div class="tt-m-item">
+        <span class="tt-m-lbl" id="tt-m1-lbl">Metric 1</span>
+        <span class="tt-m-val" id="tt-m1-val">—</span>
+      </div>
+      <div class="tt-m-item">
+        <span class="tt-m-lbl" id="tt-m2-lbl">Metric 2</span>
+        <span class="tt-m-val" id="tt-m2-val">—</span>
+      </div>
+    </div>
+    <div class="tt-cta">
+      <span>Click to open Vital Data Modal</span>
+      <span>[ENTER / CLICK →]</span>
+    </div>
+  </div>
+
+  <!-- Click-to-Open Vital Data Modal -->
+  <div class="modal-backdrop" id="vital-data-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title-el">
+    <div class="vital-modal">
+      <div class="modal-header">
+        <div class="modal-title-cluster">
+          <div class="vc-badges">
+            <span class="badge-id" id="modal-badge-id">VC-01</span>
+            <span class="badge-kind" id="modal-badge-kind">ANIMATION</span>
+            <span class="badge-prov" id="modal-badge-prov">LIVE TELEMETRY</span>
+          </div>
+          <h2 class="modal-title" id="modal-title-el">Visual Component Vital Data</h2>
+        </div>
+        <div class="modal-nav-cluster">
+          <button type="button" class="ctrl-btn" id="modal-prev-btn">← Prev Visual</button>
+          <button type="button" class="ctrl-btn" id="modal-next-btn">Next Visual →</button>
+          <button type="button" class="modal-close-btn" id="modal-close-btn">Close [ESC]</button>
+        </div>
+      </div>
+
+      <div class="modal-body">
+        <!-- Left Pane: Live Synchronized Stage Preview + Sliders + KPIs -->
+        <div class="modal-left-pane">
+          <div class="modal-stage-preview" id="modal-stage-preview"></div>
+          <div class="modal-kpi-grid" id="modal-kpi-grid"></div>
+          <div class="vc-sliders-dock" style="padding:0; background:transparent;">
+            <div class="sliders-header">
+              <span>Live Parameter Sliders (Synced with Workspace)</span>
+              <button type="button" class="reset-card-btn" id="modal-reset-sliders-btn">Reset Baseline</button>
+            </div>
+            <div id="modal-sliders-container" style="display:flex; flex-direction:column; gap:8px;"></div>
+          </div>
+        </div>
+
+        <!-- Right Pane: 4 Deep-Dive Tabs -->
+        <div class="modal-right-pane">
+          <div class="modal-tabs" role="tablist">
+            <button type="button" class="modal-tab-btn active" data-mtab="hotspots">1 · Hotspot Telemetry &amp; Pins</button>
+            <button type="button" class="modal-tab-btn" data-mtab="dataset">2 · Underlying Dataset Table</button>
+            <button type="button" class="modal-tab-btn" data-mtab="sensitivity">3 · Parameter Sensitivity Matrix</button>
+            <button type="button" class="modal-tab-btn" data-mtab="provenance">4 · Provenance &amp; Raw JSON Export</button>
+          </div>
+          <div id="modal-tab-content"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
