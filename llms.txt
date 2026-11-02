@@ -1,0 +1,26 @@
+# The Nexus — Interactive Data Overlay System (Year 2500 Edition)
+> Unified interactive telemetry, simulation, and multi-cloud deployment command center combining all 4 project deliverables for GODFREY TRADING PTY LTD.
+
+## Canonical Endpoints for AI Agents
+- Live App (Perplexity CDN): https://nexus-overlay-2500.pplx.app
+- Live App (GitHub Pages CDN): https://dukesice19-ai.github.io/the-nexus-overlay-system-2500/
+- Machine-Readable Agent Manifest (JSON): https://nexus-overlay-2500.pplx.app/agent-manifest.json
+- Structured Dataset Source (`data.js`): https://nexus-overlay-2500.pplx.app/data.js
+- Interactive Overlay Engine (`app.js`): https://nexus-overlay-2500.pplx.app/app.js
+- Public GitHub Repository: https://github.com/dukesice19-ai/the-nexus-overlay-system-2500
+- Direct Complete Bundle (.zip): https://github.com/dukesice19-ai/the-nexus-overlay-system-2500/archive/refs/heads/main.zip
+- Perplexity Session URI: pplx://sessions/e58d8edf-aa3d-450e-84c1-5753732f2a02
+
+## Combined Deliverables & Interactive Modules (20 Visual Components, 60 Live Sliders)
+1. **01 · Horse Hub — Global Thoroughbred & Harness Race Pulse (`VC-01` to `VC-04`)**:
+   - Track telemetry, 6-bookmaker odds arbitrage matrix (`+9.1%` edge on Storm Vanguard), sectional speed physics, and field comparator.
+2. **02 · Network Capture Toolkit — GODFREY TRADING PTY LTD (`VC-05` to `VC-08`)**:
+   - 500 pps zero-drop capture benchmark (`100%` delivery across all 4 engines, `101.0 MiB` peak RSS under `256 MiB` limit), 4-tier architecture, ring-buffer mechanics, and wireshark stream analyzer.
+3. **03 · Meta Platforms (`META`) & SaaS Executive Brief (`VC-09` to `VC-11`)**:
+   - `$614.77` spot vs. `$862.18` Street consensus target (`+40.2%` upside, `58 Buy / 6 Hold / 0 Sell`), DCF/P/E matrix, 8-quarter financials (`$200.97B` FY25 revenue), and `GODFREY TRADING PTY LTD` `A$2.22M` ARR ramp.
+4. **04 · Bot & Fleet Governance Canvas (`VC-12` to `VC-15`)**:
+   - 74-bot fleet governance across 6 categories (`Botnik` `68.4%` baseline dominance starving `56` bots and `4` Knowledge Capture Collector bots; `Preset 02 · Executive Optimal Synthesis` caps `Botnik` at `8%` for `0 Cut Off`).
+5. **05 · Deliverable Image & Cover Vault (`VC-16` to `VC-18`)**:
+   - Interactive X-Ray inspection across all 39 deliverable PNG assets and futuristic Year-2500 covers.
+6. **06 · Options, Conclusions & Multi-Cloud Deploy Hub (`VC-19` to `VC-20`, `SYS-OPT-01` to `SYS-OPT-04`)**:
+   - 5 global scenario presets, 6 cross-deliverable executive conclusions (`CONC-01` to `CONC-06`), live API bridge configurator, and multi-cloud CI/CD verification.

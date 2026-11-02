@@ -1,0 +1,111 @@
+{
+  "schema_version": "2500.3.0",
+  "system_id": "the-nexus-overlay-system-2500",
+  "title": "The Nexus — Interactive Data Overlay System (Year 2500 Edition)",
+  "copyright": "Copyright (c) 2026 GODFREY TRADING PTY LTD. All rights reserved.",
+  "canonical_session_uri": "pplx://sessions/e58d8edf-aa3d-450e-84c1-5753732f2a02",
+  "canonical_thread_url": "https://www.perplexity.ai/computer/tasks/e58d8edf-aa3d-450e-84c1-5753732f2a02",
+  "live_endpoints": {
+    "perplexity_app": "https://nexus-overlay-2500.pplx.app",
+    "github_pages_cdn": "https://dukesice19-ai.github.io/the-nexus-overlay-system-2500/",
+    "github_repository": "https://github.com/dukesice19-ai/the-nexus-overlay-system-2500",
+    "github_zip_download": "https://github.com/dukesice19-ai/the-nexus-overlay-system-2500/archive/refs/heads/main.zip",
+    "agent_manifest_url": "https://nexus-overlay-2500.pplx.app/agent-manifest.json",
+    "llms_txt_url": "https://nexus-overlay-2500.pplx.app/llms.txt",
+    "vercel_import_url": "https://vercel.com/new/import?s=https%3A%2F%2Fgithub.com%2Fdukesice19-ai%2Fthe-nexus-overlay-system-2500"
+  },
+  "workspace_paths": {
+    "project_dir": "/home/user/workspace/nexus-overlay-system",
+    "bundle_zip": "/home/user/workspace/the-nexus-overlay-system-vercel-bundle.zip",
+    "handoff_markdown": "/home/user/workspace/nexus-overlay-system/AGENT_HANDOFF.md",
+    "agent_manifest": "/home/user/workspace/nexus-overlay-system/agent-manifest.json",
+    "llms_txt": "/home/user/workspace/nexus-overlay-system/llms.txt"
+  },
+  "architecture_summary": {
+    "visual_components_count": 20,
+    "visual_component_ids": [
+      "VC-01", "VC-02", "VC-03", "VC-04", "VC-05",
+      "VC-06", "VC-07", "VC-08", "VC-09", "VC-10",
+      "VC-11", "VC-12", "VC-13", "VC-14", "VC-15",
+      "VC-16", "VC-17", "VC-18", "VC-19", "VC-20"
+    ],
+    "live_parameter_sliders_count": 60,
+    "deliverable_png_assets_count": 39,
+    "scenario_presets": [
+      {
+        "id": "baseline",
+        "name": "Preset 01 · Verified Baseline (Audit Lock)",
+        "description": "Restores all 20 visual components and 60 sliders to verified source-data baseline across all 4 deliverables."
+      },
+      {
+        "id": "optimal",
+        "name": "Preset 02 · Executive Optimal Synthesis (Recommended)",
+        "description": "Caps Botnik at 8% (restoring 4 cut-off Knowledge Capture Collector bots and all 56 cut-off fleet bots), sets META target multiple to 25.4x ($862.18 / +40.2% upside), and locks Simultaneous Dual-Engine capture at 500 pps / 256 MiB zero-drop."
+      },
+      {
+        "id": "stress",
+        "name": "Preset 03 · High-Load Stress & Quota Surge",
+        "description": "Simulates 5,000 pps capture load, 128 MiB memory ceiling, and 95% Botnik dominance."
+      },
+      {
+        "id": "surge",
+        "name": "Preset 04 · Bull Market & Monetization Expansion",
+        "description": "Simulates 28x META P/E multiple, 14% discount rate, and 2.2x SaaS ARR growth multiplier."
+      },
+      {
+        "id": "xray",
+        "name": "Preset 05 · Full X-Ray Telemetry Inspection",
+        "description": "Activates 100% X-Ray blend across all Deliverable Vault matrices and cover canvases."
+      }
+    ],
+    "executive_conclusions": [
+      {
+        "id": "CONC-01",
+        "domain": "Deliverable 04 · Bot Fleet Governance",
+        "target_visual": "VC-12",
+        "headline": "Rebalance Botnik from 68.4% to 8.0% Hard Cap",
+        "verified_metric": "0 Cut Off (56 Bots Restored)"
+      },
+      {
+        "id": "CONC-02",
+        "domain": "Deliverable 02 · Network Capture Toolkit",
+        "target_visual": "VC-05",
+        "headline": "Standardize on Simultaneous Dual-Engine Mode",
+        "verified_metric": "100% Delivery · 101.0 MiB Peak"
+      },
+      {
+        "id": "CONC-03",
+        "domain": "Deliverable 03 · Meta Platforms Investment Brief",
+        "target_visual": "VC-09",
+        "headline": "Maintain Overweight / Buy on META ($614.77 Spot)",
+        "verified_metric": "$862.18 Target (+40.2% Upside)"
+      },
+      {
+        "id": "CONC-04",
+        "domain": "Deliverable 01 · Horse Hub Race Pulse",
+        "target_visual": "VC-02",
+        "headline": "Execute Cross-Book Arbitrage on R4 Flemington & R8 Doncaster",
+        "verified_metric": "+9.1% Edge on Storm Vanguard"
+      },
+      {
+        "id": "CONC-05",
+        "domain": "Deliverable 02 & 03 · GODFREY TRADING PTY LTD SaaS",
+        "target_visual": "VC-11",
+        "headline": "Scale Enterprise Capture Licensing to A$2.22M ARR",
+        "verified_metric": "A$2.22M Q4 ARR · 78% Gross Margin"
+      },
+      {
+        "id": "CONC-06",
+        "domain": "Domain 06 · Multi-Cloud Infrastructure",
+        "target_visual": "VC-20",
+        "headline": "Active Dual-CDN Redundancy + Automated GitHub CI/CD",
+        "verified_metric": "HTTP 200 · 0 Runtime Errors"
+      }
+    ]
+  },
+  "agent_protocol": {
+    "in_session_delegation": "Pass /home/user/workspace/nexus-overlay-system or /home/user/workspace/the-nexus-overlay-system-vercel-bundle.zip in message_agent or spawn_agent.",
+    "cross_session_perplexity": "Reference pplx://sessions/e58d8edf-aa3d-450e-84c1-5753732f2a02 with load_sessions or fetch https://nexus-overlay-2500.pplx.app/agent-manifest.json.",
+    "external_agents": "Point any web-capable agent (Claude, GPT, Cursor, MCP) to https://nexus-overlay-2500.pplx.app/llms.txt or https://dukesice19-ai.github.io/the-nexus-overlay-system-2500/agent-manifest.json."
+  }
+}

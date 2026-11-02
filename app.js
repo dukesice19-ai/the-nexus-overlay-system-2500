@@ -1924,12 +1924,25 @@
             </div>
             <div class="deploy-target-row">
               <div class="deploy-target-top">
-                <span>3 · Public GitHub Repo &amp; 1-Click Vercel Import</span>
-                <span class="mono" style="color:var(--accent-amber); font-size:10.5px;">CI/CD + vercel.json</span>
+                <span>3 · Public GitHub Repo, Direct .ZIP &amp; 1-Click Vercel Import</span>
+                <span class="mono" style="color:var(--accent-amber); font-size:10.5px;">CI/CD + .ZIP</span>
               </div>
               <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-top:2px;">
                 <a class="live-link-btn" href="https://github.com/dukesice19-ai/the-nexus-overlay-system-2500" target="_blank" rel="noopener noreferrer">GitHub Repo ↗</a>
+                <a class="live-link-btn" href="https://github.com/dukesice19-ai/the-nexus-overlay-system-2500/archive/refs/heads/main.zip" target="_blank" rel="noopener noreferrer">Download .ZIP ⬇</a>
                 <a class="live-link-btn" href="https://vercel.com/new/import?s=https%3A%2F%2Fgithub.com%2Fdukesice19-ai%2Fthe-nexus-overlay-system-2500" target="_blank" rel="noopener noreferrer">1-Click Vercel Import ↗</a>
+              </div>
+            </div>
+            <div class="deploy-target-row">
+              <div class="deploy-target-top">
+                <span>4 · Inter-Agent Sharing Protocol (agent-manifest.json &amp; llms.txt)</span>
+                <span class="mono" style="color:var(--accent-purple); font-size:10.5px;">MULTI-AGENT READY</span>
+              </div>
+              <div style="display:flex; align-items:center; gap:8px; flex-wrap:wrap; margin-top:2px;">
+                <a class="live-link-btn" href="agent-manifest.json" target="_blank" rel="noopener noreferrer">agent-manifest.json ↗</a>
+                <a class="live-link-btn" href="llms.txt" target="_blank" rel="noopener noreferrer">llms.txt ↗</a>
+                <a class="live-link-btn" href="AGENT_HANDOFF.md" target="_blank" rel="noopener noreferrer">AGENT_HANDOFF.md ↗</a>
+                <button type="button" class="live-link-btn" data-action="copy-agent-handoff" id="copy-agent-handoff-btn" style="cursor:pointer;">Copy Agent Handoff Prompt</button>
               </div>
             </div>
           </div>
@@ -3055,6 +3068,24 @@
 
       if (action === "download-gh-workflow") {
         downloadGhWorkflow();
+        return;
+      }
+
+      if (action === "copy-agent-handoff") {
+        const promptText = [
+          "Load session e58d8edf-aa3d-450e-84c1-5753732f2a02 and fetch https://nexus-overlay-2500.pplx.app/agent-manifest.json and https://nexus-overlay-2500.pplx.app/llms.txt to collaborate on The Nexus — Interactive Data Overlay System (GODFREY TRADING PTY LTD).",
+          "Live App: https://nexus-overlay-2500.pplx.app",
+          "GitHub Pages Mirror: https://dukesice19-ai.github.io/the-nexus-overlay-system-2500/",
+          "GitHub Repo: https://github.com/dukesice19-ai/the-nexus-overlay-system-2500",
+          "Active Preset: " + STATE.activePreset,
+          "Slider State JSON: " + JSON.stringify(STATE.sliders)
+        ].join("\n");
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(promptText).then(() => {
+            actEl.textContent = "Agent Handoff Copied ✓";
+            setTimeout(() => { actEl.textContent = "Copy Agent Handoff Prompt"; }, 2500);
+          });
+        }
         return;
       }
     }
