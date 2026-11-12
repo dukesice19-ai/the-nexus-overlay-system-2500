@@ -17,3 +17,8 @@ Unified interactive telemetry, visual overlay, and executive decision synthesis 
 - **Interactive Preview Card**: https://www.perplexity.ai/computer/a/the-nexus-interactive-data-ove-k8XKXFSWR92nHWOb2RsmxQ
 - **One-Click Vercel GitHub Import**: [Import `dukesice19-ai/the-nexus-overlay-system-2500` on Vercel](https://vercel.com/new/import?s=https%3A%2F%2Fgithub.com%2Fdukesice19-ai%2Fthe-nexus-overlay-system-2500)
 - **Vercel Edge CDN Manifest**: Pre-configured via `vercel.json` (`vercel --prod`)
+
+## Domain 07 · Elite AI Hub + Domain 08 · Project 444
+
+- `elitehub.js` adds the Elite AI Hub (https://elitehub.ai/) governance layer: a 4-step governed execution gate (command → policy check → governed run → sealed SHA-256 audit receipt), the six sovereign planes, Vertical OS counts by domain, and deployment tiers. Figures come from the public elitehub.ai pages; nothing calls app.elitehub.ai.
+- Project 444 (https://www.perplexity.ai/projects/444-WMd9idUWQqSIIBHzJtwsCQ) is shown as the workspace node that holds every Nexus artifact. The link is private to project members.

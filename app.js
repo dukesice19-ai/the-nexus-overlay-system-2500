@@ -2003,7 +2003,7 @@
 
     let html = "";
 
-    if (STATE.activeDomain !== "asset-vault") {
+    if (STATE.activeDomain !== "asset-vault" && STATE.activeDomain !== "elite-hub") {
       domainMeta.forEach((dm) => {
         if (STATE.activeDomain !== "all" && STATE.activeDomain !== dm.key) return;
         const comps = VISUAL_COMPONENTS.filter((vc) => {
@@ -2037,6 +2037,10 @@
 
     if (STATE.activeDomain === "all" || STATE.activeDomain === "asset-vault") {
       html += renderAssetVaultSection(q);
+    }
+
+    if ((STATE.activeDomain === "all" || STATE.activeDomain === "elite-hub") && window.NEXUS_ELITEHUB) {
+      html += window.NEXUS_ELITEHUB.renderSection(q);
     }
 
     if (!html) {
